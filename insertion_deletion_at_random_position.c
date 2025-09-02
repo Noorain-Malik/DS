@@ -44,7 +44,9 @@ for ( int i = position; i <n ; i++)
 n--;
 display(ptr,n);
 }
-
+else{
+    printf("there is no element in array");
+}
 
 }
 int main(){
