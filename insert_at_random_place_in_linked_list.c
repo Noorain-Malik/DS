@@ -1,4 +1,4 @@
-//by using it you can't inser at element at beg and at end ,for that you have to include if else(2special cases
+//by using it you can't inser at element at beg ,for that you have to include if else(special case
 #include <stdio.h>
 #include<stdlib.h>
 struct node{
@@ -44,8 +44,8 @@ void freeList(struct node* head) {
         free(temp);
     }
 }
-void inert_random(struct node* ptr,int element){
-    for(int i=0;ptr->data!=element;i++){
+void insert_random(struct node* ptr,int element){
+    for(int i=0;ptr->data!=element;i++){    //for insertion at fronrt add special case
         ptr=ptr->next;
     }
     int n;
@@ -84,6 +84,8 @@ int main(){
     int element;
     printf("enter the element after which you want to insert new node");
     scanf("%d",&element);
+    insert_random(head,element);
+    display_linked_list(head);
 
     freeList(head);
     return 0;
